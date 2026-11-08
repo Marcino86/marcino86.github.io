@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Polityka prywatności – rclone OMV Backup</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, -apple-system, Segoe UI, sans-serif; }
+    body { max-width: 760px; margin: 4rem auto; padding: 0 1.25rem; line-height: 1.65; }
+    h1 { line-height: 1.2; }
+    a { text-underline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Polityka prywatności – rclone OMV Backup</h1>
+    <p><strong>Data obowiązywania:</strong> 8 listopada 2026 r.</p>
+    <p>Ta polityka opisuje prywatną konfigurację narzędzia rclone używaną do tworzenia kopii zapasowych własnego serwera Raspberry Pi / OpenMediaVault na własnym Dysku Google.</p>
+
+    <h2>1. Dostęp do danych Google</h2>
+    <p>Po udzieleniu zgody aplikacja korzysta z uprawnienia Google Drive wybranego podczas konfiguracji OAuth. Zakres „drive” daje technicznie szeroki dostęp do plików na Dysku Google. W tej konfiguracji dostęp jest wykorzystywany wyłącznie do obsługi kopii zapasowych w skonfigurowanych katalogach: wyświetlania list plików i folderów, sprawdzania metadanych, przesyłania i aktualizowania kopii oraz odczytu plików w ramach weryfikacji lub odtwarzania kopii.</p>
+
+    <h2>2. Cel wykorzystania danych</h2>
+    <p>Dane z Google Drive są wykorzystywane wyłącznie do przechowywania, porównywania i obsługi kopii zapasowych właściciela. Narzędzie może sprawdzać nazwy, rozmiary, daty i inne metadane plików w skonfigurowanym miejscu docelowym, aby ustalić, które kopie wymagają aktualizacji.</p>
+
+    <h2>3. Przetwarzanie i przechowywanie</h2>
+    <p>Operacje rclone są wykonywane lokalnie na Raspberry Pi właściciela. Kopie są szyfrowane przed przesłaniem przez funkcję rclone crypt. Zaszyfrowane pliki i nazwy są przechowywane na osobistym Dysku Google właściciela. Nie są przesyłane na serwer tej strony.</p>
+    <p>Konfiguracja rclone, w tym token autoryzacyjny OAuth i dane klienta OAuth, jest przechowywana lokalnie w katalogu konfiguracyjnym administratora systemu. Właściciel odpowiada za ochronę lokalnego dostępu do serwera oraz hasła szyfrującego rclone crypt.</p>
+
+    <h2>4. Udostępnianie danych</h2>
+    <p>Ta prywatna konfiguracja nie udostępnia danych Google innym użytkownikom ani nie przekazuje ich operatorowi tej strony. Dane kopii zapasowych są przesyłane do Google w celu zapisania ich na Dysku Google właściciela. Google przetwarza je zgodnie z własnymi warunkami i polityką prywatności.</p>
+
+    <h2>5. Przechowywanie i usuwanie</h2>
+    <p>Kopie pozostają na Dysku Google do czasu ich usunięcia przez właściciela lub usunięcia zgodnie z konfiguracją retencji kopii. Właściciel może usunąć pliki bezpośrednio na Dysku Google albo odebrać aplikacji dostęp na stronie <a href="https://myaccount.google.com/permissions">uprawnień konta Google</a>. Odebranie dostępu OAuth blokuje przyszły dostęp aplikacji, ale samo w sobie nie usuwa wcześniej zapisanych kopii.</p>
+
+    <h2>6. Bezpieczeństwo</h2>
+    <p>Zawartość kopii jest szyfrowana lokalnie przed wysłaniem do chmury. Dostęp do serwera i konfiguracji rclone jest przeznaczony dla administratora. Właściciel odpowiada za ochronę konta Google, danych logowania i hasła szyfrującego.</p>
+
+    <h2>7. Kontakt</h2>
+    <p>W sprawach dotyczących tej prywatnej konfiguracji można skorzystać z adresu e-mail pomocy technicznej wskazanego na ekranie zgody OAuth aplikacji w Google Cloud.</p>
+
+    <p><a href="index.html">Powrót do strony głównej</a></p>
+  </main>
+</body>
+</html>

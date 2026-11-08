@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>rclone OMV Backup</title>
+  <meta name="description" content="Prywatny system kopii zapasowych Raspberry Pi i OpenMediaVault na Google Drive.">
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, -apple-system, Segoe UI, sans-serif; }
+    body { max-width: 760px; margin: 4rem auto; padding: 0 1.25rem; line-height: 1.65; }
+    h1 { line-height: 1.2; }
+    a { text-underline-offset: 3px; }
+    .note { padding: 1rem 1.2rem; border-left: 4px solid #3984d6; background: color-mix(in srgb, CanvasText 6%, Canvas); }
+    footer { margin-top: 3rem; border-top: 1px solid GrayText; padding-top: 1rem; font-size: .95rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>rclone OMV Backup</h1>
+    <p>Jest to prywatna konfiguracja narzędzia <a href="https://rclone.org/">rclone</a>, używana do tworzenia kopii zapasowych domowego serwera Raspberry Pi z OpenMediaVault (OMV) na osobistym Dysku Google właściciela.</p>
+
+    <h2>Do czego służy?</h2>
+    <p>Automatycznie przesyła wybrane archiwa Home Assistant, dane i konfigurację serwera, konfigurację kontenerów oraz metadane Plex. Nie kopiuje filmów ani innych plików biblioteki multimediów Plex. Kopie są wysyłane przez funkcję rclone crypt, która szyfruje zawartość i nazwy plików przed zapisaniem ich na Dysku Google.</p>
+
+    <h2>Jak wykorzystywane są dane Google?</h2>
+    <p>Autoryzacja Google Drive służy wyłącznie do odczytu informacji o plikach i folderach oraz do tworzenia, aktualizowania i weryfikowania kopii zapasowych na osobistym Dysku Google właściciela. Operacje rclone są wykonywane lokalnie na jego Raspberry Pi, a nie przez zewnętrzny serwer tej strony.</p>
+    <p>To prywatna konfiguracja przeznaczona do użytku przez jednego właściciela. Nie jest publiczną usługą i nie oferuje dostępu innym użytkownikom.</p>
+
+    <div class="note">
+      <strong>Prywatność:</strong> szczegóły dostępu do danych Google, ich wykorzystania, przechowywania i usuwania opisuje <a href="privacy.html">Polityka prywatności</a>.
+    </div>
+  </main>
+  <footer>Projekt prywatny · Ostatnia aktualizacja: 8 listopada 2026 r.</footer>
+</body>
+</html>
